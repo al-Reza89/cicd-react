@@ -37,12 +37,11 @@ jobs:
       # deploy project
 
       - name: Deploy to production url
-
         # if you have different requirements for deployment suppose your main brach for production and you have another branch for development then you can use this branch option to deploy your project to different branches.
         if: github.ref == 'refs/heads/main'
         # you can not change the name of this action.
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           # if uses: JamesIves/github-pages-deploy-action@4.1.4 runs it will automatically cerate new branch which name is gh-pages.
-          brach: gh-pages
+          branch: gh-pages
           folder: dist
